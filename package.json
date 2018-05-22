@@ -1,0 +1,26 @@
+{
+  "name": "human-resource-app",
+  "version": "1.0.0",
+  "description": "This is a simple human resource app that displays the list of employee records, retrieve each employee record, with support for RESTful API",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "colors": "^1.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/philaden/Human-Resource-App.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/philaden/Human-Resource-App/issues"
+  },
+  "homepage": "https://github.com/philaden/Human-Resource-App#readme"
+}
