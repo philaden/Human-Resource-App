@@ -1,6 +1,6 @@
 var http = require('http');
 var employeeService = require('./lib/employees');
-var responder = require('.lib/responseGenerator');
+var responder = require('./lib/responseGenerator');
 
 var staticFile = responder.staticFile('/public');
 http.createServer(function(req, res){
@@ -37,10 +37,7 @@ http.createServer(function(req, res){
 
     } else {
         //try to send the static file
-        if (data){
-        return res.writeHead(200);
         res.end('static file maybe');
-        }
     }
 }).listen(1337, '127.0.0.1');
 console.log('Server running at http://127.0.0.1:1337/');
