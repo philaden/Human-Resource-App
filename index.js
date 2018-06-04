@@ -2,7 +2,6 @@ var http = require('http');
 var employeeService = require('./lib/employees');
 var responder = require('./lib/responseGenerator');
 
-var staticFile = responder.staticFile('/public');
 http.createServer(function(req, res){
     // A parsed url to work with in case there are parameters 
     var _url;
@@ -18,7 +17,7 @@ http.createServer(function(req, res){
         employeeService.getEmployees(function(error, data) {
             if (error){
                 //send a 500 error
-                return responder.send500(error, res);
+                return responder.send500(error, response);
             }
             //send the data with a 200 status code
             return responder.sendJson(data, res);
@@ -37,7 +36,7 @@ http.createServer(function(req, res){
 
     } else {
         //try to send the static file
-        res.end('static file maybe');
+        return responder.staticFile('/public');
     }
 }).listen(1337, '127.0.0.1');
 console.log('Server running at http://127.0.0.1:1337/');
