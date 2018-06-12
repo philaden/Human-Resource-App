@@ -11,6 +11,7 @@
   },
   "devDependencies": {},
   "scripts": {
+    "populate": "node ./bin/populate_db",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
